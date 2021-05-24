@@ -1,0 +1,307 @@
+// container asesoría
+.section-1 {
+    display: none;
+    margin-bottom: 5%;
+    .description-asesoria {
+        padding-top: 8%;
+        font-family: "aileronthin";
+        .callaction-register {
+            margin-top: 4%;
+        }
+        .formAsesoria {
+            margin-top: 5%;
+            .inputText {
+                font-family: "aileronregular";
+                margin: 1% 0;
+            }
+            .inputAsesoria {
+                width: 60%;
+                padding: 1%;
+                border-radius: 3%;
+                border: transparent;
+                outline-color: $bg-color-3;
+    
+            }
+            .button-register button{
+                margin-bottom: 4%;
+                background-color: $bg-color;
+                padding: 1% 3%;
+                border-radius: 3px;
+                border: transparent;
+                font-family: "aileronregular";
+                &:hover {
+                    @extend %transform-hov;
+                    background-color: $bg-color-3;
+                    color: $color-2;
+                }
+            }
+        }
+        
+    }
+    #disertantes {
+        margin: 4% 0 2% 0;
+        padding: 0;
+        h4 {
+            font-family: "aileronthin";
+        }
+        #btnDisertantes {
+            margin-bottom: 4%;
+            background-color: $bg-color-3;
+            color: $color-2;
+            padding: 1%;
+            border-radius: 3px;
+            border: transparent;
+            font-family: "aileronregular";
+            &:hover {
+                @extend %transform-hov;
+                background-color: $bg-color-4;
+                color: $color-2;
+            }
+        }
+        .disertantes {
+            font-family: "aileronregular";
+            font-size: $h2;
+        }
+    }
+}
+
+.detail-asesoria, .cursos-description{
+    font-family: "aileronultrathin";
+}
+
+.cursos-section {
+    display: none;
+    margin: 0;
+    padding: 5% 15%;
+    background-color: $bg-color-3;
+    #curso-tipologia {
+        margin-top: 3%;
+        background-color: $bg-color-2;
+        color: $color-2;
+        padding: 1%;
+        border-radius: 3px;
+        border: transparent;
+        font-family: "aileronregular";
+        outline: transparent;
+    }
+    .cursos-container {
+        margin: 1% 0 5% 0;
+        display: grid;
+        grid-template-columns:repeat(4, 1fr);
+        grid-gap: 10px;
+        .curso {
+            position: relative;
+            min-height: 550px;
+            background-color: $bg-color-4;
+            padding: 5%;
+            border-radius: 10px;
+            h3 {
+                padding: 15% 0 5% 0 ;
+                font-family: "aileronregular";
+                font-size: $h3;
+            }
+            p {
+                font-size: $p;
+                font-family: "aileronultrathin";
+            }
+            .btn-contenedor-comprar {
+                position: absolute;
+                bottom: 4%;
+                .btn-comprar {
+                    margin-bottom: 4%;
+                    background-color: $bg-color;
+                    padding: 1% 7%;
+                    border-radius: 3px;
+                    border: transparent;
+                    font-family: "aileronregular";
+                    &:hover {
+                        @extend %transform-hov;
+                        background-color: $bg-color-3;
+                        color: $color-2;
+                    }
+                }
+            }
+        }
+        img {
+            padding: 10% 2%;
+            width: 100%;
+        } 
+    }
+}
+
+
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    .modal-carrito {
+        position: relative;
+        background-color: $bg-color;
+        min-width: 500px;
+        height: auto;
+        padding: 20px;
+        margin-top: -100%;
+        transition: all .5s;
+        h3 {
+            color: $bg-color-4;
+            padding-bottom: 5px;
+            font-size: $h3;
+        }
+        #carritoCerrar {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: $bg-color-2;
+            border: none;
+            background-color: $bg-color;
+            &:hover{
+                cursor: pointer;
+                color: $bg-color-3;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+        #carrito-contenedor {
+            padding-bottom: 5px;
+            .cursoEnCarrito {
+                border-left: 5px solid $bg-color-3;
+                border-bottom-left-radius: 3px;
+                border-top-left-radius: 3px;
+                margin: 5px 0;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color: $bg-color-3;
+                font-size: $p;
+                &:hover{
+                    border-left: 5px solid $bg-color-4;
+                }
+                p {
+                    margin-bottom: 0;
+                }
+                .precioitem {
+                    margin-left: auto;
+                }
+                .boton-eliminar {
+                    margin-left: 15%;
+                    background-color: transparent;
+                    color: $hov-color;
+                    border: none;
+                    &:hover {
+                        cursor: pointer;
+                        color: $bg-color-4;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+        .precioTotal {
+            color: $bg-color-4;
+            margin: 0;
+        }
+        #btn-compra-final {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            color: $color-2;
+            background-color: $bg-color-3;
+            padding: 1% 3%;
+            border-radius: 3px;
+            border: transparent;
+            font-family: "aileronregular";
+            &:hover {
+                @extend %transform-hov;
+                background-color: $bg-color-4;
+            }
+        }
+    }
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-active .modal-carrito {
+    margin-top: 0;
+}
+
+.modal-carrito .precioTotal {
+    padding-top: 10px;
+}
+
+.modal-saludo {
+    position: relative;
+    background-color: $bg-color-3;
+    min-width: 400px;
+    height: auto;
+    padding: 20px;
+    transition: all .5s;
+    display: flex;
+    p {
+        padding: 4%;
+        color: $color-2;
+        font-size: $p;
+        text-align: center;
+        margin: 0;
+    }
+    #checkoutCerrar {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        background-color: transparent;
+        color: $bg-color;
+        border: none;
+        &:hover {
+            cursor: pointer;
+            color: $bg-color-4;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+
+.modal-existInCart {
+    position: relative;
+    background-color: $bg-color-3;
+    min-width: 400px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    p {
+        padding: 4%;
+        color: $color-2;
+        font-size: $p;
+        text-align: center;
+        margin: 0;
+    }
+    #closeAlert {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        background-color: transparent;
+        color: $bg-color;
+        border: none;
+        &:hover {
+            cursor: pointer;
+            color: $bg-color-4;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}

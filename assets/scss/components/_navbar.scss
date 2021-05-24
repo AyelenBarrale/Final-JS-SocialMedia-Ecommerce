@@ -1,0 +1,11 @@
+// navbar
+.navbar {
+    background-color: $bg-color;
+    button {
+        border: none;
+        background-color: transparent;
+    }
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: $hov-color;
+}

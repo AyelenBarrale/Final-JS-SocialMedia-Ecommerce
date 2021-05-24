@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Bootstrapp CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--SEO-->
+    <meta name="author" content="Ayelen Barrale. Web Development"/>
+    <meta name="copyright" content="Ayelen Barrale 2021"/>
+    <meta name="keywords" content="asesoria personalizada, marketing digital, SEO, SEM, Social Media, cursos online, asesoría para emprendimientos, asesoría para empresas">
+    <meta name="description" content="Landingpage para registro en workshop para empresas sobre presencia digital y venta de cursos relacionados.">
+    <link rel="shortcut icon" href="./img/Favicon-Barrale-Marketing-Digital.ico" type="image/x-icon"> 
+    <title>Simulador JS: e-commerce de cursos MKT Digital </title>
+
+    <!--Protocolo Open Graph-->
+    <meta property= "og-title" content="Barrale. Marketing Digital para emprendedores">
+    <meta property= "og-description" content="Formación para empresas y emprendedores sobre cómo potenciar su presencia digital">
+    <meta property= "og-image" content= "" > <!--completar-->
+    <meta property= "og-url" content= "" > <!--completar-->
+    <meta property= "og-type" content= "website" >
+    <meta property= "og-locale" content= "en_EN" >
+</head>
+<body>
+    <!--Barra de navegación-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top px-5">
+            <a class="navbar-brand" href="index.html"><img src="./img/Logo_Top_Head_308x72.png" alt="Ayelen Barrale. Servicios de Marketing Digital" class="w-75" id="logoBar"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cursos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recursos Gratuitos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Sobre Mi</a>
+                </li>
+                <li class="nav-item">
+                    <button id="boton-carrito" class="nav-link"><span id="contadorCarrito">0</span><i class="fas fa-shopping-cart"></i></button>
+                </li>
+                </ul>
+            </div>
+            </nav>
+    </header>
+
+    <!--Sección Registros-->
+    <section class="section-1">
+        <div>
+            <h1>Workshop: Redes Sociales para Emprendedores</h1>
+        </div>
+        <div class="detail-asesoria">
+            <h4>Nueva edición</h4>
+        </div>
+        <div class="container-asesoria">
+            <div class="row row-asesoria">
+                <div class="col-lg-5">
+                    <img src="./img/Asesoria-Barrale-Marketing-Digital.svg" id="imgAsesoria" alt="Workshop sobre presencia digital de marcas y emprendimientos.">
+                </div>
+                <div class="description-asesoria col-lg-7">
+                    <div class="Description-1">
+                    <p><b>Encuentro de 4 horas</b>, donde te ayudo a potenciar la presencia digital de tu emprendimiento o empresa.</p>
+                    </div>
+                    <div class="Description-2">
+                    <p>Te guiaré en este proceso intercambiando experiencias, claves y consejos.<br> Además, realizaremos el análisis, diagnóstico y plan estratégico para potenciar tu presencia 2.0, y fidelizar las comunidades de tu marca.</p>
+                    </div>
+                    <div class="callaction-register">
+                    <p>Registráte para guardar tu lugar. Cupo límite: 10 lugares.</p>
+                    </div>
+
+                    <div class="formAsesoria">
+                        <form id="formEstudiante">
+                            <p class="inputText">Nombre</p>
+                            <input id="inputName" class=inputAsesoria autocomplete="off" type="text" placeholder="Ingresá tu nombre">
+                            <p class="inputText">Apellido</p>
+                            <input id="inputLastName" class=inputAsesoria autocomplete="off" type="text" placeholder="Ingresá tu apellido">
+                            <p class="inputText">Profesión</p>
+                            <input id="inputProfesion" class=inputAsesoria autocomplete="off" type="text" placeholder="Ingresá tu profesión">
+                            <br>
+                            <br>
+                            <div class="button-register">
+                                <button>Registrarme</button>
+                            </div>
+                        </form>
+                        <div class="text-register" >
+                            <p id="resultado"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="disertantes">
+                    <h4>Conocé los disertantes que participarán en esta edición</h4>
+                    <button id="btnDisertantes">Disertantes</button>
+                    <div id="nombreDisertantes"></div>
+                </div>
+            </div>          
+        </div>
+    </section>
+
+    <!-- Sección venta de cursos -->
+    <section class="cursos-section">
+        <div class="cursos-title">
+            <h2>Cursos Online</h2>
+        </div>
+        <div class="cursos-description">
+            <h4>Aprendé a tu ritmo a gestionar la presencia digital de tu marca o emprendimiento</h4>
+        </div>
+
+        <select id="curso-tipologia">
+            <option value="all">Todos</option>
+            <option value="Redes Sociales">Redes Sociales</option>
+            <option value="Anuncios">Anuncios</option>
+            <option value="SEO">SEO</option>
+        </select>
+
+        <div class="cursos-container" id="cursos-contenedor"></div>
+
+    </section>
+
+    <!-- Modal alert de curso ya añadido -->
+
+    <div class="modal-contenedor" id="modalContenedorExistInCart">
+        <div class="modal-existInCart">
+            <button id="closeAlert"><i class="fas fa-times-circle"></i></button>
+            <p>Este curso ya se encuentra incluído en tu carrito</p>
+        </div>
+    </div>
+
+    <!-- Modal carrito -->
+    <div class="modal-contenedor" id="modalContenedorCart">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor"></div>
+            <p class="precioTotal">Precio total: $<span id="precioTotal"></span></p>
+            <button id="btn-compra-final">Finalizar Compra</button>
+        </div>
+    </div>
+
+
+    <!-- Modal satulación -->
+    <div class="modal-contenedor" id="modalContenedorHi">
+        <div class="modal-saludo">
+            <button id="checkoutCerrar"><i class="fas fa-times-circle"></i></button>
+            <p>¡Muchas gracias por realizar tu compra! <br> Ya podés disfrutar de tus cursos. Accedé a los mismos desde tu correo electrónico.</p>
+        </div>
+    </div>
+
+
+
+    <!--Footer-->
+    <footer>
+        <div class="footer-container gap-5">
+            <div class="footer-left">
+                <div class="logo-footer">
+                    <img src="./img/Logo_Top_Head_462x108.png" alt="Ayelen Barrale. Servicios de Marketing Digital">
+                </div>
+                <div class="description-footer">
+                    <p>Licenciada en Comunicación Social y especialista en Marketing Digital.</p>
+                </div>
+            </div>
+            <div class="footer-center">
+                <p>All rights reserved | Barrale Web Development | 2021</p>
+            </div>
+            <div class="footer-right">
+                <div class="callaction-footer">
+                    <p>¡Seguime!</p>
+                </div>
+                <div class="youtube-icon">
+                    <a href="https://www.youtube.com/channel/UC72zWIz0S1AyDQmcxDFmDxQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        
+    <!-- Option 1: Bootstrap Bundle with Popper 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    
+    <!--JQUERY-->
+    <script src="./js/jquery.js"></script>
+
+    <!--JS nativo-->
+    <script src="./js/estudiantes.js"></script>
+    <script src="./js/stock.js"></script>
+    <script src="./js/cursos.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/modal-saludo.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/disertantes.js"></script>
+
+</body>
+</html>

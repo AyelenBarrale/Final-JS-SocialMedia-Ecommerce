@@ -1,0 +1,31 @@
+//footer
+footer {
+    display: none;
+};
+
+.footer-container {
+    padding: 2% 5%;
+    background-color: $bg-color-4;
+    font-family: "aileronultrathin";
+    font-size: $p2;
+    letter-spacing: 0.1rem;
+    @extend %grid-hor;
+    img {
+        width: 40%;
+        padding-bottom: 1%;
+    }
+    i {
+        color: $bg-color;
+    }
+    .footer-center {
+        padding-top: 10%;
+    }
+    .footer-right {
+        padding-top: 10%;
+        display: flex;
+        justify-content: center;     
+        .callaction-footer {
+            padding-right: 2%;
+        }   
+    }
+}
