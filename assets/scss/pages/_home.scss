@@ -242,38 +242,6 @@
     padding-top: 10px;
 }
 
-.modal-saludo {
-    position: relative;
-    background-color: $bg-color-3;
-    min-width: 400px;
-    height: auto;
-    padding: 20px;
-    transition: all .5s;
-    display: flex;
-    p {
-        padding: 4%;
-        color: $color-2;
-        font-size: $p;
-        text-align: center;
-        margin: 0;
-    }
-    #checkoutCerrar {
-        position: absolute;
-        top: 15px;
-        right: 30px;
-        background-color: transparent;
-        color: $bg-color;
-        border: none;
-        &:hover {
-            cursor: pointer;
-            color: $bg-color-4;
-        }
-        &:focus {
-            outline: none;
-        }
-    }
-}
-
 
 .modal-existInCart {
     position: relative;
