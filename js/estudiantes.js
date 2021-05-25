@@ -13,7 +13,6 @@ class Estudiante{
 };
 
 
-/* Local Storage */
 let estudiantesLista = JSON.parse(localStorage.getItem("Estudiantes"))
 
 
