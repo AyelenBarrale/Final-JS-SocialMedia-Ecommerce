@@ -1,19 +1,22 @@
-
+const carrito = [];
 
 function agregarAlCarrito(id) {
     const cursoElegido = stockCursos.find(el => el.id == id );
     const modalAlert = $("#modalContenedorExistInCart")
     const closeAlert = $("#closeAlert")
 
+
     if (!carrito.includes(cursoElegido)) {
         carrito.push(cursoElegido)
         localStorage.setItem("cursos cargados" , JSON.stringify(carrito))
     } else {
-        modalAlert.addClass("modal-active").animate({transition: "all"}, (1500))
+        modalAlert.addClass("modal-active").animate({transition: "all"}, (1500)) 
         closeAlert.on("click" , () => {
-            modalAlert.fadeOut(500)
+            modalAlert.removeClass("modal-active")
         })
     }
+
+    
 
     actualizarCarrito()
 
@@ -61,5 +64,5 @@ function actualizarCarrito() {
 }
 
 
-const carrito = [];
+
 
