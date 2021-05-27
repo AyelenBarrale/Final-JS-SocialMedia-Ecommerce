@@ -3,18 +3,19 @@ const botonCerrar = $("#carritoCerrar")
 const modalContenedorCart = $("#modalContenedorCart")
 const modalCarrito = $(".modal-carrito")
 
-botonAbrir.click( () => {
-    $("#modalContenedorCart").toggleClass("modal-active")
+
+botonAbrir.on("click" , () => {
+    modalContenedorCart.toggleClass("modal-active")
 })
 
-botonCerrar.click( () => {
-    $("#modalContenedorCart").toggleClass("modal-active")
+botonCerrar.on("click" , () => {
+    modalContenedorCart.toggleClass("modal-active")
 })
 
-modalContenedorCart.click( () => {
-    $("#modalContenedorCart").toggleClass("modal-active")
+modalContenedorCart.on("click" , () => {
+    modalContenedorCart.toggleClass("modal-active")
 })
 
-modalCarrito.click( (event) => {
+modalCarrito.on("click" , (event) => {
     event.stopPropagation()
 })

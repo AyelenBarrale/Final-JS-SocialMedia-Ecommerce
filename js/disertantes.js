@@ -23,8 +23,7 @@ const llamarApi = async () => {
     mostrarDisertantes(disertantes)
 }
 
-/* let disertantesLista = $(".disertantes")
- */let countClick = 0
+let countClick = 0
 function countClickAdd() {
     countClick += 1;
 }

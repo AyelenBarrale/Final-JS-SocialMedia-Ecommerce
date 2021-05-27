@@ -16,8 +16,6 @@ function agregarAlCarrito(id) {
         })
     }
 
-    
-
     actualizarCarrito()
 
 };
@@ -35,7 +33,6 @@ function eliminarCurso(id) {
     localStorage.setItem("cursos cargados" , JSON.stringify(carrito))
     actualizarCarrito();
 }
-
 
 
 
